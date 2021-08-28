@@ -7,50 +7,18 @@ public class MaximumProblem {
 		getMaximum("Apple","Peach","Banana");
 	}
 	
-	public static void getMaximum(Integer firstNumber, Integer secondNumber, Integer thirdNumber) {
-		if (firstNumber.compareTo(secondNumber) > 0) {
-			if (firstNumber.compareTo(thirdNumber) > 0) {
-				System.out.println(firstNumber.intValue());
+	public static <E extends Comparable<E>> void getMaximum(E first, E second, E third) {
+		if (first.compareTo(second) > 0) {
+			if (first.compareTo(third) > 0) {
+				System.out.println(first);
 			} else {
-				System.out.println(thirdNumber.intValue());
+				System.out.println(third);
 			}
 		} else {
-			if (secondNumber.compareTo(thirdNumber) > 0) {
-				System.out.println(secondNumber.intValue());
+			if (second.compareTo(third) > 0) {
+				System.out.println(second);
 			} else {
-				System.out.println(thirdNumber.intValue());
-			}
-		}
-	}
-	
-	public static void getMaximum(Float firstNumber, Float secondNumber, Float thirdNumber) {
-		if (firstNumber.compareTo(secondNumber) > 0) {
-			if (firstNumber.compareTo(thirdNumber) > 0) {
-				System.out.println(firstNumber.floatValue());
-			} else {
-				System.out.println(thirdNumber.floatValue());
-			}
-		} else {
-			if (secondNumber.compareTo(thirdNumber) > 0) {
-				System.out.println(secondNumber.floatValue());
-			} else {
-				System.out.println(thirdNumber.floatValue());
-			}
-		}
-	}
-	
-	public static void getMaximum(String firstWord, String secondWord, String thirdWord) {
-		if (firstWord.compareTo(secondWord) > 0) {
-			if (firstWord.compareTo(thirdWord) > 0) {
-				System.out.println(firstWord);
-			} else {
-				System.out.println(thirdWord);
-			}
-		} else {
-			if (secondWord.compareTo(thirdWord) > 0) {
-				System.out.println(secondWord);
-			} else {
-				System.out.println(thirdWord);
+				System.out.println(third);
 			}
 		}
 	}
