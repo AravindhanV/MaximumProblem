@@ -2,11 +2,11 @@ package com.bridgelabz.maximumproblem;
 
 public class MaximumProblem {
 	public static void main(String[] args) {
-		getMaximumNumber(1,2,3);
-		getMaximumNumber(0.1f,0.2f,0.3f);
+		getMaximum(1,2,3);
+		getMaximum(0.1f,0.2f,0.3f);
 	}
 	
-	public static void getMaximumNumber(Integer firstNumber, Integer secondNumber, Integer thirdNumber) {
+	public static void getMaximum(Integer firstNumber, Integer secondNumber, Integer thirdNumber) {
 		if (firstNumber.compareTo(secondNumber) > 0) {
 			if (firstNumber.compareTo(thirdNumber) > 0) {
 				System.out.println(firstNumber.intValue());
@@ -22,7 +22,7 @@ public class MaximumProblem {
 		}
 	}
 	
-	public static void getMaximumNumber(Float firstNumber, Float secondNumber, Float thirdNumber) {
+	public static void getMaximum(Float firstNumber, Float secondNumber, Float thirdNumber) {
 		if (firstNumber.compareTo(secondNumber) > 0) {
 			if (firstNumber.compareTo(thirdNumber) > 0) {
 				System.out.println(firstNumber.floatValue());
