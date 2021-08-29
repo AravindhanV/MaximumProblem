@@ -15,19 +15,20 @@ public class MaximumProblem <E extends Comparable<E>>{
 		new MaximumProblem<String>("Apple","Peach","Banana").getMaximum();
 	}
 	
-	public void getMaximum() {
-		if (first.compareTo(second) > 0) {
-			if (first.compareTo(third) > 0) {
-				System.out.println(first);
-			} else {
-				System.out.println(third);
-			}
-		} else {
-			if (second.compareTo(third) > 0) {
-				System.out.println(second);
-			} else {
-				System.out.println(third);
-			}
+	public E getMaximum() {
+		E max = first;
+		if (second.compareTo(max) > 0) {
+			max = second;
+		} 
+		if(third.compareTo(max) > 0) {
+			max = third;
 		}
+		
+		printMaximum(max);
+		return max;
+	}
+	
+	public <E> void printMaximum(E max) {
+		System.out.println(max);
 	}
 }
